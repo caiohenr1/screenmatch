@@ -2,7 +2,7 @@ package br.com.alura.screenmatch.modelos;
 
 public class Serie extends Title{
 
-    private String seasons;
+    private int seasons;
     private boolean active;
     private int episodesBySeasons;
     private double minutesPerEpisode;
@@ -31,14 +31,19 @@ public class Serie extends Title{
         this.minutesPerEpisode = minutesPerEpisode;
     }
 
-    public String getSeasons() {
+    public int getSeasons() {
         return seasons;
     }
 
-    public void setSeasons(String seasons) {
+    public void setSeasons(int seasons) {
         this.seasons = seasons;
     }
 
-
-
+    @Override
+    public void displayTechnicalSheet() {
+        System.out.println(String.format("""
+                Série: %s
+                Temporadas: %d
+                """,getName(), getSeasons()));
+    }
 }

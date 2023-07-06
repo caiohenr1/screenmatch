@@ -55,7 +55,7 @@ public class Title {
         System.out.println(String.format("""
                 Filme: %s
                 Ano de lancamento: %d
-                """, name, releaseYear));
+                """, getName(), getReleaseYear()));
     }
 
     public void AddRatings(double note) {

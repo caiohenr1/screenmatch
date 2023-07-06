@@ -1,29 +1,29 @@
+import br.com.alura.screenmatch.modelos.Anime;
 import br.com.alura.screenmatch.modelos.Movie;
 import br.com.alura.screenmatch.modelos.Serie;
 
 
 public class Main {
     public static void main(String[] args) {
-        Movie myMovie1 = new Movie();
-        Serie mySerie = new Serie();
 
-        myMovie1.setName("inuyasha");
-        myMovie1.setReleaseYear(1970);
-        myMovie1.setDurationMinutes(166);
-        myMovie1.setRating(0);
+        Movie movie = new Movie();
+        Serie serie = new Serie();
+        Anime anime = new Anime();
 
+        movie.setName("Star Wars: Uma nova esperança");
+        movie.setReleaseYear(1977);
+        movie.setDurationMinutes(120);
+        movie.displayTechnicalSheet();
 
+        serie.setName("Vikings");
+        serie.setSeasons(12);
+        serie.setActive(false);
+        serie.displayTechnicalSheet();
 
-        myMovie1.displayTechnicalSheet();
-
-        myMovie1.AddRatings(5.5);
-        myMovie1.AddRatings(2.4);
-        myMovie1.AddRatings(9);
-
-        System.out.println(String.format("""
-                A média do filme é: %.1f
-                """, myMovie1.calcAverageRatings()));
-
+        anime.setName("Inuyasha");
+        anime.setAnimeSeassons(12);
+        anime.setNumberOfEpisodeos(169);
+        anime.displayTechnicalSheet();
 
     }
 }
